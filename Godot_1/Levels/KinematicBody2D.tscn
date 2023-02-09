@@ -7,5 +7,6 @@
 script = ExtResource( 2 )
 
 [node name="Skeleton" type="Sprite" parent="."]
+position = Vector2( 405, 257 )
 texture = ExtResource( 1 )
 hframes = 2
