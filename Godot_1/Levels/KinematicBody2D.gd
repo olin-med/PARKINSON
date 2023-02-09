@@ -18,16 +18,20 @@ func _process(delta):
 #Right
 	elif state == 1:
 		velocity.x = speed
+		move_and_slide(velocity)
 	
 #Left
 	elif state == 2:
 		velocity.x = -speed
+		move_and_slide(velocity)
 	
 #Forward
 	elif state == 3:
 		velocity.y = speed
+		move_and_slide(velocity)
 	
 #Back
 	elif state == 4:
 		velocity.y = -speed
+		move_and_slide(velocity)
 	
