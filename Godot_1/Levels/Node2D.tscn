@@ -1,24 +1,46 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Art/Pixilart Sprite Sheet.png" type="Texture" id=1]
 [ext_resource path="res://Art/Pixilart Sprite Sheet (2).png" type="Texture" id=2]
-[ext_resource path="res://Levels/KinematicBody2D2.gd" type="Script" id=3]
-[ext_resource path="res://Levels/KinematicBody2D.gd" type="Script" id=4]
+[ext_resource path="res://Levels/Node2D.gd" type="Script" id=3]
+[ext_resource path="res://Fonte/DTM-Sans.ttf" type="DynamicFontData" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 52
+font_data = ExtResource( 4 )
 
 [node name="Node2D" type="Node2D"]
-
-[node name="KinematicBody2D" type="KinematicBody2D" parent="."]
-script = ExtResource( 4 )
-
-[node name="Sprite" type="Sprite" parent="KinematicBody2D"]
-position = Vector2( 832, 246 )
-texture = ExtResource( 2 )
-hframes = 2
-
-[node name="KinematicBody2D2" type="KinematicBody2D" parent="."]
 script = ExtResource( 3 )
 
-[node name="Sprite" type="Sprite" parent="KinematicBody2D2"]
-position = Vector2( 560, 271 )
+[node name="Sprite1" type="Sprite" parent="."]
+position = Vector2( 775, 299 )
+texture = ExtResource( 2 )
+hframes = 2
+region_rect = Rect2( 826, 278, 128, 64 )
+
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( 688, 272 )
 texture = ExtResource( 1 )
 hframes = 2
+region_rect = Rect2( 560, 271, 128, 64 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 623.0
+margin_top = 64.0
+margin_right = 860.0
+margin_bottom = 182.0
+custom_fonts/font = SubResource( 1 )
+
+[node name="StopButton" type="Button" parent="."]
+margin_left = 723.0
+margin_top = 129.0
+margin_right = 929.0
+margin_bottom = 187.0
+text = "Stop"
+
+[node name="StartButton" type="Button" parent="."]
+margin_left = 457.0
+margin_top = 127.0
+margin_right = 663.0
+margin_bottom = 185.0
+text = "Start"

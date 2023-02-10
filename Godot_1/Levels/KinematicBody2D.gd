@@ -1,17 +1,12 @@
 extends KinematicBody2D
 
-var speed = 100
-var velocity = Vector2()
-var state: int = 0
-var rng = 0
-
-
+var poschange
 
 
 func _process(delta):
 
-	state = rand_range(0, 4)
-	print(state)
+	poschange = rand_range(0, 1)
+	print(poschange)
 
 	if state == 0:
 		pass
