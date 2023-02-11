@@ -31,7 +31,7 @@ func start_moving():
 func stop_moving():
 	moving = false
 
-func _process(delta):
+func _process(_delta):
 	#se a variavel "moving" esta como true, mudar a posicao de sprite1 e sprite2 aleatoriamente em x e y
 	if moving:
 		sprite1.position += Vector2(randi() % 3 - 1, randi() % 3 - 1) * speed
